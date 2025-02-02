@@ -1,1 +1,1 @@
-# azure-ai-repo
+# test-azure-model-github-actions
