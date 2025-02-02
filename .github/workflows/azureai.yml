@@ -32,7 +32,7 @@ jobs:
         with:
           #creds: ${{ secrets.AZURE_CREDENTIALS}}
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          client-secret: ${{ secrets.AZURE_CLIENT_SECRET_ID}}
+          #client-secret: ${{ secrets.AZURE_CLIENT_SECRET_ID}}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
@@ -64,4 +64,4 @@ jobs:
 
       # Apply Terraform configuration
       - name: Terraform Apply
-        run: terraform destroy -auto-approve
+        run: terraform apply -auto-approve
