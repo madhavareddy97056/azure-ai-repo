@@ -14,7 +14,7 @@ permissions:
   contents: read
 
 jobs:
-  Deploy Azure AI services:
+  Deploy_Azure_AI_services:
     name: 'Provisioning Azure AI services using terraform'
     runs-on: ubuntu-latest
 
