@@ -4,6 +4,5 @@ terraform {
     storage_account_name  = "tfbackendstorageacct"
     container_name        = "remotestate"
     key                   = "terraform.tfstate"
-    
   }
 }
