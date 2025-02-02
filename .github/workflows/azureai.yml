@@ -75,7 +75,7 @@ jobs:
         with:
           secret: ${{ github.token }}
           approvers: madhavareddy97056
-          minimun-approvals: 1
+          minimum-approvals: 1
           issue-title: "Manual approval required to deploy Azure services"
           issue-body: "Please approve or deny the deployment"
 
