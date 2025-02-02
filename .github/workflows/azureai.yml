@@ -118,5 +118,9 @@ jobs:
         run: terraform init #-backend-config="resource_group_name=tf-backend-remote-state-rg" -backend-config="storage_account_name=tfbackendstorageacct" -backend-config="container_name=remotestate"
 
       # Apply Terraform configuration
-      - name: Terraform Apply
-        run: terraform apply -auto-approve
+      # - name: Terraform Apply
+      #   run: terraform apply -auto-approve
+
+      # Apply Terraform configuration
+      - name: Terraform Destroy
+        run: terraform destroy -auto-approve
