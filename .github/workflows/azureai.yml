@@ -67,6 +67,8 @@ jobs:
 
 
     permissions:
+      id-token: write  # Required for OIDC authentication
+      contents: read
       issues: write
 
     steps: 
