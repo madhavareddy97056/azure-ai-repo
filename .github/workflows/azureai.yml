@@ -64,4 +64,4 @@ jobs:
 
       # Apply Terraform configuration
       - name: Terraform Apply
-        run: terraform apply -auto-approve
+        run: terraform destroy -auto-approve
