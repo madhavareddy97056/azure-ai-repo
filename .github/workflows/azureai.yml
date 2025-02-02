@@ -30,10 +30,11 @@ jobs:
       - name: Azure Login
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS}}
-          # client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          # tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-          # subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          #creds: ${{ secrets.AZURE_CREDENTIALS}}
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          client-secret: ${{ secrets.AZURE_CLIENT_SECRET_ID}}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
       # # Set Terraform Authentication Environment Variables
       # - name: Set Terraform Azure Credentials
@@ -50,7 +51,7 @@ jobs:
 
       # Initialize Terraform
       - name: Terraform Init
-        run: terraform init -backend-config="resource_group_name=tf-backend-remote-state-rg" -backend-config="storage_account_name=tfbackendstorageacct" -backend-config="container_name=remotestate"
+        run: terraform init #-backend-config="resource_group_name=tf-backend-remote-state-rg" -backend-config="storage_account_name=tfbackendstorageacct" -backend-config="container_name=remotestate"
 
       # Validate Terraform configuration
       - name: Terraform Validate
