@@ -79,7 +79,6 @@ jobs:
           issue-title: "Manual approval required to deploy Azure services"
           issue-body: "Please approve or deny the deployment"
 
-      steps:
       # Checkout repository
       - name: Checkout repository
         uses: actions/checkout@v4
