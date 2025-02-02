@@ -50,7 +50,7 @@ jobs:
 
       # Initialize Terraform
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -backend-config="resource_group_name=tf-backend-remote-state-rg" -backend-config="storage_account_name=tfbackendstorageacct" -backend-config="container_name=remotestate"
 
       # Validate Terraform configuration
       - name: Terraform Validate
